@@ -1,0 +1,133 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Predict</title>
+    <style>
+        body {
+            background-image: url("{% static 'C:\Users\kamya\PycharmProjects\CVD_Detection\CVD_Detection\static\CVD_Detection\images\bg1.png'%}");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+
+        .main {
+            position: fixed;
+            top: 100px;
+            left: 400px;
+            width: 700px;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.32);
+            border-radius: 10px;
+            align-items: center;
+            padding: 5%;
+        }
+
+        h1 {
+            color: #ffffff;
+            font-size: 36px;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px #000000;
+            font-family: "Arial Black", sans-serif;
+        }
+
+        h2 {
+            color: #ffffff;
+            font-size: 24px;
+            text-shadow: 1px 1px 2px #000000;
+            font-family: "Arial", sans-serif;
+        }
+
+        input[type=submit] {
+            margin-top: 8px;
+            background-color: #4dc3ff;
+            border-radius: 2px;
+            color: white;
+            padding: 8px 16px;
+            cursor: pointer;
+            font-weight: bold;
+            margin-top: 15px;
+            font-size: 15px;
+        }
+
+        td {
+        margin-top:2px;
+            color: #ffffff;
+            font-size: 15px;
+            font-family: "Arial", sans-serif;
+        }
+
+        .heading {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        .please {
+            font-family: 'Times New Roman', Times, serif;
+            font-style: italic;
+        }
+    </style>
+</head>
+
+<body>
+    <div align="center" class="main">
+        <h1 class="please">Please enter the following information</h1>
+        <form action="result">
+            <table>
+                <tr>
+                    <td align="right" class="heading">Age:</td>
+                    <td align="left"><input type="text" name="n1"></td>
+                    <td> </td>
+                    <td align="right" class="heading">Sex:</td>
+                    <td align="left"><input type="text" name="n2"></td>
+                </tr>
+                <tr>
+                    <td align="right" class="heading">Chest Pain:</td>
+                    <td align="left"><input type="text" name="n3"></td>
+                    <td> </td>
+                    <td align="right" class="heading">Blood Pressure:</td>
+                    <td align="left"><input type="text" name="n4"></td>
+                </tr>
+                <tr>
+                    <td align="right" class="heading">Cholesterol:</td>
+                    <td align="left"><input type="text" name="n5"></td>
+                    <td> </td>
+                    <td align="right" class="heading">Fasting Blood Sugar:</td>
+                    <td align="left"><input type="text" name="n6"></td>
+                </tr>
+                <tr>
+                    <td align="right" class="heading">Resting ECG:</td>
+                    <td align="left"><input type="text" name="n7"></td>
+                    <td> </td>
+                    <td align="right" class="heading">Maximum Heart Rate:</td>
+                    <td align="left"><input type="text" name="n8"></td>
+                </tr>
+                <tr>
+                    <td align="right" class="heading">Exercise(Angina):</td>
+                    <td align="left"><input type="text" name="n9"></td>
+                    <td> </td>
+                    <td align="right" class="heading">Old Peak:</td>
+                    <td align="left"><input type="text" name="n10"></td>
+                </tr>
+                <tr>
+                    <td align="right" class="heading">Peak Exercise:</td>
+                    <td align="left"><input type="text" name="n11"></td>
+                    <td> </td>
+                    <td align="right" class="heading">Coronary Artery Disease:</td>
+                    <td align="left"><input type="text" name="n12"></td>
+                </tr>
+                <tr>
+                    <td align="right" class="heading">Thallium Stress Test:</td>
+                    <td align="left"><input type="text" name="n13"></td>
+                </tr>
+            </table>
+            <input type='submit' value="SUBMIT">
+        </form>
+        <h2>Result:{{result2}}</h2>
+    </div>
+</body>
+
+</html>
